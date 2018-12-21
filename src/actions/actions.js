@@ -1,10 +1,13 @@
 import { ActionTypes } from "../actions/types";
+import { createActions } from "redux-actions";
 
 let nextTodoId = 0;
 
-export const increment = () => ({ type: ActionTypes.Increment });
-export const decrement = () => ({ type: ActionTypes.Decrement });
-export const reset = () => ({ type: ActionTypes.Reset });
+export const { increment, decrement, reset } = createActions(
+  ActionTypes.Increment,
+  ActionTypes.Decrement,
+  ActionTypes.Reset
+);
 
 export const addTodo = text => ({
   type: ActionTypes.AddTodo,
@@ -14,7 +17,7 @@ export const addTodo = text => ({
   }
 });
 
-export const setVisibilityFilter = filter => ({
+export const setVisibilityFilter = (filter, todoText) => ({
   type: ActionTypes.SetVisibilityFilter,
   payload: {
     filter: filter

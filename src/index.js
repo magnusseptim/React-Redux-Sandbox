@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import root from "./reducers/root";
+import counter from "./reducers/count";
 import Counter from "../src/containers/Counter";
 import TodoTable from "../src/containers/TodoTable";
 import "./styles.css";

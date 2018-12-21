@@ -4,7 +4,10 @@ export const ActionTypes = {
   Reset: "RESET",
   AddTodo: "ADD_TODO",
   SetVisibilityFilter: "SET_VISIBILITY_FILTER",
-  ToogleTodo: "TOGGLE_TODO"
+  ToogleTodo: "TOGGLE_TODO",
+  All: "ALL",
+  Completed: "COMPLETED",
+  Active: "ACTIVE"
 };
 
 export const VisibilityFilters = {

@@ -2,7 +2,7 @@ import { ActionTypes } from "../actions/types";
 
 const todos = (state = [], action) => {
   switch (action.type) {
-    case ActionTypes.ADD_TODO:
+    case ActionTypes.AddTodo:
       return [
         ...state,
         {
@@ -11,7 +11,7 @@ const todos = (state = [], action) => {
           completed: false
         }
       ];
-    case ActionTypes.TOGGLE_TODO:
+    case ActionTypes.ToogleTodo:
       return state.map(
         todo =>
           (todo.id = action.payload.id

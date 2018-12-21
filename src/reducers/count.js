@@ -1,4 +1,5 @@
 import { ActionTypes } from "../actions/types";
+import { handleActions } from "../";
 
 const initialState = {
   count: 0,

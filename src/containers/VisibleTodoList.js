@@ -17,12 +17,12 @@ const getVisibleTodos = (todos, filter) => {
 };
 
 const mapStateToProprs = state => ({
-  todos: getVisibleTodos(state.todos, state.visibilityFilter)
+  todos: getVisibleTodos(state.todos, state.visibilityFilter.filter)
 });
 
 const mapDispatchToProps = dispatch => ({});
 
 export default connect(
   mapStateToProprs,
-  mapDispatchToProps
+  null
 )(TodoList);

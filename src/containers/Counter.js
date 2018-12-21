@@ -15,8 +15,8 @@ const Counter = ({ count, countText, increment, decrement, reset }) => {
 };
 
 const mapStateToProps = state => ({
-  countText: state.countText,
-  count: state.count
+  countText: state.counter.countText,
+  count: state.counter.count
 });
 
 const mapDispatchToProps = dispatch => ({
