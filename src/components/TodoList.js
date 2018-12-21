@@ -1,13 +1,13 @@
 import React from "react";
-import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import Todo from "./Todo";
 
-const TodoList = ({ todos }) => {
-  return (
-    <ul>
-      {todos.map(todo => (
-        <Todo id={todo.id} text={todo.text} />
-      ))}
-    </ul>
-  );
-};
+const TodoList = ({ todos }) => (
+  <ul>
+    {todos.map(todo => (
+      <Todo id={todo.id} {...todo} />
+    ))}
+  </ul>
+);
+
+export default TodoList;
